@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="AppListItemView" customModule="LaunchMultipleSimulators" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wxl-z1-FZS">
+                    <rect key="frame" x="30" y="7" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="ZdB-a2-W9k"/>
+                        <constraint firstAttribute="height" constant="36" id="vd5-vO-Hp8"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon" id="1sW-Sb-HJj"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZKO-8M-lHf">
+                    <rect key="frame" x="74" y="25" width="304" height="18"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Label" id="UZc-Sp-qo5">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ola-xP-93G">
+                    <rect key="frame" x="387.5" y="13" width="81" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="sbb-Fi-X4F"/>
+                    </constraints>
+                    <buttonCell key="cell" type="roundTextured" title="finder显示" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b2V-no-Nng">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" usesAppearanceFont="YES"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showInFinderAction:" target="c22-O7-iKe" id="lFc-z9-vGu"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JKj-3g-ep7">
+                    <rect key="frame" x="74" y="7" width="304" height="13"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingHead" title="Label" id="vYl-Z3-ciT">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZDA-7A-umR">
+                    <rect key="frame" x="7" y="16" width="22" height="18"/>
+                    <buttonCell key="cell" type="radio" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="52F-ip-DaI">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="radioBoxAction:" target="c22-O7-iKe" id="UIF-Sg-1eM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ZKO-8M-lHf" firstAttribute="leading" secondItem="wxl-z1-FZS" secondAttribute="trailing" constant="10" id="5it-nb-OYz"/>
+                <constraint firstItem="ZDA-7A-umR" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="CTY-mB-X3k"/>
+                <constraint firstItem="ZKO-8M-lHf" firstAttribute="top" secondItem="wxl-z1-FZS" secondAttribute="top" id="DfM-6E-oGo"/>
+                <constraint firstItem="JKj-3g-ep7" firstAttribute="trailing" secondItem="ZKO-8M-lHf" secondAttribute="trailing" id="I0U-c3-BR7"/>
+                <constraint firstItem="JKj-3g-ep7" firstAttribute="bottom" secondItem="wxl-z1-FZS" secondAttribute="bottom" id="ISf-B8-Vgn"/>
+                <constraint firstItem="Ola-xP-93G" firstAttribute="leading" secondItem="ZKO-8M-lHf" secondAttribute="trailing" constant="12" id="Oju-wZ-ufd"/>
+                <constraint firstAttribute="trailing" secondItem="Ola-xP-93G" secondAttribute="trailing" constant="12" id="P9D-Xg-VKu"/>
+                <constraint firstItem="Ola-xP-93G" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="UmR-2X-JN1"/>
+                <constraint firstItem="wxl-z1-FZS" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="bOh-vY-E1H"/>
+                <constraint firstItem="wxl-z1-FZS" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="dxJ-IB-W1Z"/>
+                <constraint firstItem="JKj-3g-ep7" firstAttribute="leading" secondItem="ZKO-8M-lHf" secondAttribute="leading" id="h9P-c2-oGA"/>
+                <constraint firstItem="ZDA-7A-umR" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="nhu-ku-QiS"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="wxl-z1-FZS" id="YLe-YM-X8G"/>
+                <outlet property="radioBoxButton" destination="ZDA-7A-umR" id="nqa-Bq-Bc7"/>
+                <outlet property="showInFinderButton" destination="Ola-xP-93G" id="KEO-FZ-iTq"/>
+                <outlet property="subtitleLabel" destination="JKj-3g-ep7" id="gQ5-C5-grB"/>
+                <outlet property="titleLabel" destination="ZKO-8M-lHf" id="U2G-Pt-r5z"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="-79"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="icon" width="800" height="800"/>
+    </resources>
+</document>

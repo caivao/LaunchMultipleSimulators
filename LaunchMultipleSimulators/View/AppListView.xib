@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="AppListView" customModule="LaunchMultipleSimulators" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="5Kj-hE-76r">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2z3-cy-2dh">
+                            <rect key="frame" x="0.0" y="245" width="480" height="27"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="bezel" alignment="center" title="选择调试应用" bezelStyle="round" id="1f6-hr-Lzq">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kl3-QK-Pc8">
+                            <rect key="frame" x="0.0" y="40" width="480" height="206"/>
+                            <clipView key="contentView" id="ro8-JO-az6">
+                                <rect key="frame" x="1" y="1" width="478" height="204"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9L5-9V-TzK">
+                                        <rect key="frame" x="0.0" y="0.0" width="463" height="189"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </view>
+                                </subviews>
+                            </clipView>
+                            <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Hdk-Za-X5e">
+                                <rect key="frame" x="1" y="189" width="478" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="egS-O2-4wG">
+                                <rect key="frame" x="463" y="1" width="16" height="204"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                        <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clg-Zo-DyK">
+                            <rect key="frame" x="30" y="0.0" width="420" height="40"/>
+                            <subviews>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-wI-yxE">
+                                    <rect key="frame" x="-0.5" y="8" width="191" height="23"/>
+                                    <buttonCell key="cell" type="roundTextured" title="取消" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ONq-iw-MqA">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" usesAppearanceFont="YES"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="cancelAction:" target="c22-O7-iKe" id="ObA-o8-gPD"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5vd-81-0bT">
+                                    <rect key="frame" x="229.5" y="8" width="191" height="23"/>
+                                    <buttonCell key="cell" type="roundTextured" title="选择" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" refusesFirstResponder="YES" state="on" borderStyle="border" inset="2" id="ufr-yy-9nG">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="selectedAction:" target="c22-O7-iKe" id="69X-z0-u8q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Kl3-QK-Pc8" firstAttribute="leading" secondItem="5Kj-hE-76r" secondAttribute="leading" id="3yh-wO-nzj"/>
+                        <constraint firstAttribute="trailing" secondItem="2z3-cy-2dh" secondAttribute="trailing" id="4cd-W4-Daz"/>
+                        <constraint firstAttribute="width" constant="480" id="BEx-zy-76A"/>
+                        <constraint firstAttribute="bottom" secondItem="Kl3-QK-Pc8" secondAttribute="bottom" constant="40" id="Hpq-mP-hrf"/>
+                        <constraint firstAttribute="height" constant="272" id="Hr9-Mj-PrO"/>
+                        <constraint firstItem="2z3-cy-2dh" firstAttribute="top" secondItem="5Kj-hE-76r" secondAttribute="top" id="Sc7-Oe-4es"/>
+                        <constraint firstAttribute="trailing" secondItem="clg-Zo-DyK" secondAttribute="trailing" constant="30" id="SdR-Nd-qEq"/>
+                        <constraint firstItem="clg-Zo-DyK" firstAttribute="leading" secondItem="5Kj-hE-76r" secondAttribute="leading" constant="30" id="Yvo-aY-sHC"/>
+                        <constraint firstItem="2z3-cy-2dh" firstAttribute="leading" secondItem="5Kj-hE-76r" secondAttribute="leading" id="Z4Q-ZO-1dU"/>
+                        <constraint firstItem="clg-Zo-DyK" firstAttribute="top" secondItem="Kl3-QK-Pc8" secondAttribute="bottom" id="dfv-8o-hav"/>
+                        <constraint firstAttribute="trailing" secondItem="Kl3-QK-Pc8" secondAttribute="trailing" id="f2g-2u-6vC"/>
+                        <constraint firstItem="Kl3-QK-Pc8" firstAttribute="top" secondItem="2z3-cy-2dh" secondAttribute="bottom" constant="-1" id="kIJ-UQ-n3x"/>
+                        <constraint firstItem="Kl3-QK-Pc8" firstAttribute="top" secondItem="5Kj-hE-76r" secondAttribute="top" constant="26" id="kWj-oK-sey"/>
+                        <constraint firstAttribute="bottom" secondItem="clg-Zo-DyK" secondAttribute="bottom" id="vup-pV-sdU"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5Kj-hE-76r" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="BBa-nX-z6a"/>
+                <constraint firstItem="5Kj-hE-76r" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="ro3-Id-XHh"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="9Y5-wI-yxE" id="RNK-ce-KbS"/>
+                <outlet property="contentHeightConstraint" destination="Hr9-Mj-PrO" id="P8s-Lk-rvX"/>
+                <outlet property="contentView" destination="5Kj-hE-76r" id="IaP-g0-7Pq"/>
+                <outlet property="contentWidthConstraint" destination="BEx-zy-76A" id="iR8-32-aex"/>
+                <outlet property="scrollView" destination="Kl3-QK-Pc8" id="afk-vP-ign"/>
+                <outlet property="selectedButton" destination="5vd-81-0bT" id="xA8-zo-KlY"/>
+            </connections>
+            <point key="canvasLocation" x="99" y="-20"/>
+        </customView>
+    </objects>
+</document>
